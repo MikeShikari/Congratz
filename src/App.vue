@@ -9,13 +9,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin: 0;
+  height: 100%;
   color: #2c3e50;
 }
 
 nav {
   padding: 30px;
 }
-
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
 nav a {
   font-weight: bold;
   color: #2c3e50;

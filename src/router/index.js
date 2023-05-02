@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import galleryPage from '@/views/galleryPage.vue'
+import menuPage from '@/views/menuPage.vue'
+import juniorPage from '@/views/juniorPage.vue'
+import elderPage from '@/views/elderPage.vue'
 
 const routes = [
   {
@@ -9,17 +12,25 @@ const routes = [
     component: galleryPage
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/menu',
+    name: 'menu',
+    component: menuPage
+  },
+  {
+    path: '/junior',
+    name: 'junior',
+    component: juniorPage
+  },
+  {
+    path: '/elder',
+    name: 'elder',
+    component: elderPage
+  },
+ 
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(),
   routes
 })
 
